@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_host.xml"
+    app:startDestination="@id/initFragment">
+
+    <fragment
+        android:id="@+id/initFragment"
+        android:name="com.milord.lab3_2.InitFragment"
+        android:label="fragment_init"
+        tools:layout="@layout/fragment_init" >
+        <action
+            android:id="@+id/action_initFragment_to_itemsFragment"
+            app:destination="@id/itemsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemsFragment"
+        android:name="com.milord.lab3_2.ItemsFragment"
+        android:label="fragment_items"
+        tools:layout="@layout/fragment_items" >
+        <action
+            android:id="@+id/action_itemsFragment_to_initFragment"
+            app:destination="@id/initFragment" />
+        <action
+            android:id="@+id/action_itemsFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.milord.lab3_2.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment_to_initFragment"
+            app:destination="@id/initFragment" />
+    </fragment>
+</navigation>
